@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+    </style>
+
+    <style name="cardview_maintext">
+        <item name="android:background">#88000000</item>
+        <item name="android:textSize">@dimen/font_very_large</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:padding">@dimen/activity_horizontal_margin</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="cardview_secondarytext">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textColor">@color/textColorLightBg</item>
+    </style>
+
+    <style name="cardview_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+</resources>
