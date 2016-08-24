@@ -19,38 +19,45 @@
                 android:id="@+id/thumbnail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#B3E5FC"
                 android:src="@drawable/default_league"/>
-            <TextView
-                android:id="@+id/tv_league_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:text="League Name"
-                style="@style/cardview_maintext" />
-
 
         </RelativeLayout>
-
+        <TextView
+            android:id="@+id/tv_league_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#81D4FA"
+            android:paddingTop="@dimen/cardview_maintext_paddingTop"
+            android:paddingLeft="@dimen/cardview_primary_text_boxPadding"
+            android:paddingRight="@dimen/cardview_primary_text_boxPadding"
+            android:paddingBottom="@dimen/cardview_primary_text_boxPadding"
+            android:textAllCaps="true"
+            android:text="League Name"
+            android:layout_below="@id/thumbnail_layout"
+            style="@style/CardView_PrimaryText" />
         <LinearLayout
             android:id="@+id/alternative_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_below="@id/thumbnail_layout">
+            android:layout_below="@id/tv_league_name"
+            android:paddingLeft="@dimen/cardview_primary_text_boxPadding"
+            android:paddingRight="@dimen/cardview_primary_text_boxPadding"
+            android:paddingBottom="@dimen/cardview_primary_text_boxPadding">
             <TextView
                 android:id="@+id/tv_teams"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Number of teams"
+                android:layout_marginTop="8dp"
                 style="@style/cardview_secondarytext" />
             <TextView
                 android:id="@+id/tv_matches"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Number of match"
-                android:paddingTop="8dp"
+                android:layout_marginTop="8dp"
                 style="@style/cardview_secondarytext"/>
         </LinearLayout>
 
@@ -59,9 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/alternative_text"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:gravity="center_horizontal">
+            android:gravity="right"
+            android:padding="@dimen/cardview_action_horizontal_spacing">
             <Button
                 android:id="@+id/btn_fixture"
                 android:text="Fixture"
@@ -73,9 +79,16 @@
             <Button
                 android:id="@+id/btn_table"
                 android:text="Table"
+                android:layout_marginRight="0dp"
                 style="@style/cardview_button" />
         </LinearLayout>
-
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_frame"
+            android:textColor="@color/textColorLightBg"
+            android:text="Lorem ipsum dolor sit amet, cu sea probatus singulis, nostrum accusata scriptorem sea eu, ne sit laudem essent. Cum no magna animal adversarium, munere aperiri adipisci ex ius. An everti iudicabit suscipiantur sed. No nam tale tibique efficiendi, diam habeo tation ei nam. Diam mandamus mel eu, ei erat dignissim repudiandae vis. Eum ut option conceptam delicatissimi. Atomorum maiestatis vis ei."/>
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

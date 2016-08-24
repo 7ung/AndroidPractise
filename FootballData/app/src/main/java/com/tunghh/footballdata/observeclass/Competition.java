@@ -28,14 +28,8 @@ public class Competition {
     @SerializedName("lastUpdated")
     private String lastUpdated;
 
-    @SerializedName("teams")
-    private String teams_link;
-
-    @SerializedName("leagueTable")
-    private String table_link;
-
-    @SerializedName("fixtures")
-    private String fixtures_link;
+    @SerializedName("_links")
+    private Links _href;
 
     public int getId() {
         return id;
@@ -94,26 +88,26 @@ public class Competition {
     }
 
     public String getTeamsLink() {
-        return teams_link;
-    }
-
-    public void setTeamsLink(String teams_link) {
-        this.teams_link = teams_link;
+        return _href.teams.link;
     }
 
     public String getTableLink() {
-        return table_link;
-    }
-
-    public void setTableLink(String table_link) {
-        this.table_link = table_link;
+        return _href.leagueTable.link;
     }
 
     public String getFixturesLink() {
-        return fixtures_link;
+        return _href.fixtures.link;
     }
 
-    public void setFixturesLink(String fixtures_link) {
-        this.fixtures_link = fixtures_link;
+    public class Links{
+
+        @SerializedName("teams")
+        public Link teams;
+
+        @SerializedName("fixtures")
+        public Link fixtures;
+
+        @SerializedName("leagueTable")
+        public Link leagueTable;
     }
 }

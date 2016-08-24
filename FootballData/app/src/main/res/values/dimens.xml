@@ -3,6 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="screen_horizontal_padding">16dp</dimen>
+
     <dimen name="font_very_large">24sp</dimen>
     <dimen name="font_large">18sp</dimen>
     <dimen name="font_medium">14sp</dimen>
@@ -11,4 +13,9 @@
     <dimen name="cardview_corner">2dp</dimen>
     <dimen name="cardview_maintext_paddingTop">24dp</dimen>
     <dimen name="cardview_maintext_paddingBottom">16dp</dimen>
+    <dimen name="cardview_action_horizontal_spacing">8dp</dimen>
+
+    <dimen name="cardview_primary_text_boxPadding">16dp</dimen>
+
+    <dimen name="btn_height">36dp</dimen>
 </resources>

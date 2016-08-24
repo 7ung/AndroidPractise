@@ -7,24 +7,39 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tunghh.footballdata.R;
 import com.tunghh.footballdata.observeclass.Competition;
+
+import java.util.Random;
 
 /**
  * Created by TungHH on 8/23/2016.
  */
 public class CardViewLeague extends CardView{
 
+    private static final int[] BACKGROUND_SOURCE = {
+            R.drawable.champion_league,
+            R.drawable.default_league,
+            R.drawable.europa_leauge,
+            R.drawable.la_liga,
+            R.drawable.worldcup
+    };
+
     private Competition mLeague;
     private TextView tvLeagueName;
     private TextView tvNumberTeams;
     private TextView tvNumberMatches;
+    private ImageView ivThumbnail;
 
     private Button btnFixture;
     private Button btnTeams;
     private Button btnTable;
+
+    private View expandableDetail;
+    int expandableHeight = -1;
 
     public CardViewLeague(Context context) {
         super(context);
@@ -52,12 +67,30 @@ public class CardViewLeague extends CardView{
         btnFixture = (Button) v.findViewById(R.id.btn_fixture);
         btnTeams = (Button) v.findViewById(R.id.btn_teams);
         btnTable = (Button) v.findViewById(R.id.btn_table);
+        ivThumbnail = (ImageView) v.findViewById(R.id.thumbnail);
+
+        expandableDetail = (View) v.findViewById(R.id.detail);
 
         btnFixture.setOnClickListener(fixtureClick);
         btnTeams.setOnClickListener(teamsClick);
         btnTable.setOnClickListener(tableClick);
 
+        randomBackground();
+    }
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        if (expandableHeight == -1) {
+            expandableHeight = expandableDetail.getMeasuredHeight();
+            AnimationHelper.collapse(expandableDetail, expandableHeight);
+        }
+    }
+
+
+    private void randomBackground() {
+        int rd = new Random().nextInt(BACKGROUND_SOURCE.length);
+        ivThumbnail.setImageResource(BACKGROUND_SOURCE[rd]);
     }
 
     public void setCompetition(Competition league){
@@ -85,6 +118,8 @@ public class CardViewLeague extends CardView{
         @Override
         public void onClick(View view) {
             Log.d("", "teamsClick");
+            toggleVisibility(expandableDetail);
+
         }
     };
     OnClickListener tableClick = new OnClickListener() {
@@ -93,4 +128,13 @@ public class CardViewLeague extends CardView{
             Log.d("", "tableClick");
         }
     };
+
+    public void toggleVisibility(View v){
+        if (v.isShown()){
+            AnimationHelper.collapse(v, expandableHeight);
+        }else {
+            AnimationHelper.expand(v, expandableHeight);
+        }
+    }
+
 }
