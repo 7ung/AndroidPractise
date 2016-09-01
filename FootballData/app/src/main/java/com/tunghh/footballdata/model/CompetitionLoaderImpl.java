@@ -1,8 +1,8 @@
 package com.tunghh.footballdata.model;
 
-import com.tunghh.footballdata.apiservice.CompetitionAPI;
-import com.tunghh.footballdata.commons.APIConstants;
-import com.tunghh.footballdata.observeclass.Competition;
+import com.tunghh.footballdata.service.Router;
+import com.tunghh.footballdata.service.Constants;
+import com.tunghh.footballdata.model.POJO.Competition;
 import com.tunghh.footballdata.presenter.CompetitionLoadPresenter;
 
 import java.net.UnknownHostException;
@@ -26,7 +26,7 @@ public class CompetitionLoaderImpl
 
     @Override
     public void loadCompetition(String season) {
-        CompetitionAPI api = APIConstants.createService(CompetitionAPI.class);
+        Router api = Constants.createService(Router.class);
         Call<ArrayList<Competition>> call =  api.getCompetitions(season);
         call.enqueue(this);
     }
@@ -45,7 +45,7 @@ public class CompetitionLoaderImpl
         if (t instanceof UnknownHostException){
             presenter.showMsg("Connection Failed");
         }else{
-            presenter.showMsg("Unknown Error");
+            presenter.showMsg(t.getMessage());
         }
     }
 }

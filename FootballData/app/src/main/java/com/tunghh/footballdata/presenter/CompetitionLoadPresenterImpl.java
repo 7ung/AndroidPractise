@@ -2,7 +2,7 @@ package com.tunghh.footballdata.presenter;
 
 import com.tunghh.footballdata.model.CompetitionLoader;
 import com.tunghh.footballdata.model.CompetitionLoaderImpl;
-import com.tunghh.footballdata.observeclass.Competition;
+import com.tunghh.footballdata.model.POJO.Competition;
 import com.tunghh.footballdata.views.CompetitionView;
 
 import java.util.ArrayList;
@@ -14,6 +14,8 @@ public class CompetitionLoadPresenterImpl implements CompetitionLoadPresenter {
 
     CompetitionLoader loader;
     CompetitionView competitionView;
+
+
 
     public CompetitionLoadPresenterImpl(CompetitionView view){
         loader = new CompetitionLoaderImpl(this);
@@ -34,4 +36,5 @@ public class CompetitionLoadPresenterImpl implements CompetitionLoadPresenter {
     public void showMsg(String message) {
         competitionView.showMsg(message);
     }
+
 }

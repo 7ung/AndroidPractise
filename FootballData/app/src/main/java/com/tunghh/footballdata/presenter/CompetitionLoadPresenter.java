@@ -1,6 +1,6 @@
 package com.tunghh.footballdata.presenter;
 
-import com.tunghh.footballdata.observeclass.Competition;
+import com.tunghh.footballdata.model.POJO.Competition;
 
 import java.util.ArrayList;
 

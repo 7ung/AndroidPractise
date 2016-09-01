@@ -6,18 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorPrimary">@color/textColorPrimaryLight</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryLight</item>
     </style>
 
     <style name="CardView_PrimaryText">
         <item name="android:textSize">@dimen/font_very_large</item>
-        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColor">@color/textColorPrimaryLight</item>
     </style>
 
     <style name="cardview_secondarytext">
         <item name="android:textSize">@dimen/font_medium</item>
-        <item name="android:textColor">@color/textColorLightBg</item>
+        <item name="android:textColor">@color/textColorSecondaryDark</item>
     </style>
 
     <style name="cardview_button">
@@ -29,6 +29,41 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
         <item name="android:baselineAligned">false</item>
+    </style>
+
+    <style name="circle_thumbnail">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:innerRadius">0dp</item>
+        <item name="android:shape">ring</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="linearlayout_horizontal">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="fixture_team_name">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/font_medium_large</item>
+        <item name="android:textColor">@color/textColorPrimaryDark</item>
+    </style>
+
+    <style name="fixture_score_board">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.35</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:textSize">@dimen/font_very_large</item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
 
 </resources>

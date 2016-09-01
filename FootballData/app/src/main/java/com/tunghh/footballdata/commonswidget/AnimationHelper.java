@@ -1,8 +1,12 @@
-package com.tunghh.footballdata.commons.widget;
+package com.tunghh.footballdata.commonswidget;
 
+import android.content.Context;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
+
+import com.tunghh.footballdata.R;
 
 /**
  * Created by TungHH on 8/24/2016.
@@ -53,6 +57,53 @@ public class AnimationHelper {
 
         a.setDuration(300);
         v.startAnimation(a);
+    }
+
+    public static void sildeDown(Context context, final View v){
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.slide_down);
+        anim.reset();
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                v.setVisibility(View.VISIBLE);
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        v.clearAnimation();
+        v.startAnimation(anim);
+    }
+
+    public static void sildeUp(Context context, final View v){
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.slide_up);
+        anim.reset();
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                v.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                v.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        v.clearAnimation();
+        v.startAnimation(anim);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.tunghh.footballdata.observeclass;
+package com.tunghh.footballdata.model.POJO;
 
 import com.google.gson.annotations.SerializedName;
 

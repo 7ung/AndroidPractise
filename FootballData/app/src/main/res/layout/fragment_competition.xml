@@ -3,8 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffeeeeee"
-    android:paddingLeft="@dimen/screen_horizontal_padding"
-    android:paddingRight="@dimen/screen_horizontal_padding"
     tools:context="com.tunghh.footballdata.views.CompetitionFragment">
 
 
@@ -13,6 +11,9 @@
         android:scrollbars="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingTop="@dimen/screen_horizontal_padding"
+        android:paddingLeft="@dimen/screen_horizontal_padding"
+        android:paddingRight="@dimen/screen_horizontal_padding"
         android:background="#ffeeeeee"
         tools:listitem="@layout/cardview_league">
 

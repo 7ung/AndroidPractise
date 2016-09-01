@@ -66,7 +66,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/alternative_text"
-            android:gravity="right"
             android:padding="@dimen/cardview_action_horizontal_spacing">
             <Button
                 android:id="@+id/btn_fixture"
@@ -79,15 +78,32 @@
             <Button
                 android:id="@+id/btn_table"
                 android:text="Table"
-                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0dp"
                 style="@style/cardview_button" />
+            <Button
+                android:id="@+id/btn_standing"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:background="@drawable/ic_format_list_numbered_black_24dp"
+                android:backgroundTint="@color/colorAccent"
+                style="@style/cardview_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lv_teams"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_frame">
+
         </LinearLayout>
         <TextView
             android:id="@+id/detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/action_frame"
-            android:textColor="@color/textColorLightBg"
+            android:textColor="@color/textColorSecondaryDark"
+            android:visibility="gone"
             android:text="Lorem ipsum dolor sit amet, cu sea probatus singulis, nostrum accusata scriptorem sea eu, ne sit laudem essent. Cum no magna animal adversarium, munere aperiri adipisci ex ius. An everti iudicabit suscipiantur sed. No nam tale tibique efficiendi, diam habeo tation ei nam. Diam mandamus mel eu, ei erat dignissim repudiandae vis. Eum ut option conceptam delicatissimi. Atomorum maiestatis vis ei."/>
     </RelativeLayout>
 

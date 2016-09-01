@@ -1,4 +1,4 @@
-package com.tunghh.footballdata.observeclass;
+package com.tunghh.footballdata.model.POJO;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -22,6 +22,7 @@ public class Team {
     @SerializedName("crestUrl")
     private String thumbnail;
 
+    @SerializedName("_links")
     private Links _href;
 
     public String getName() {

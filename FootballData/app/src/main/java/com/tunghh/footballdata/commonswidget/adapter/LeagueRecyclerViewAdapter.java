@@ -1,10 +1,10 @@
-package com.tunghh.footballdata.commonswidget;
+package com.tunghh.footballdata.commonswidget.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import com.tunghh.footballdata.commons.widget.CardViewLeague;
-import com.tunghh.footballdata.observeclass.Competition;
+import com.tunghh.footballdata.commonswidget.CardViewLeague;
+import com.tunghh.footballdata.model.POJO.Competition;
 
 import java.util.ArrayList;
 

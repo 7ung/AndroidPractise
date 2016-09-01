@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.tunghh.footballdata.R;
-import com.tunghh.footballdata.commonswidget.LeagueRecyclerViewAdapter;
-import com.tunghh.footballdata.observeclass.Competition;
+import com.tunghh.footballdata.commonswidget.adapter.LeagueRecyclerViewAdapter;
+import com.tunghh.footballdata.model.POJO.Competition;
 import com.tunghh.footballdata.presenter.CompetitionLoadPresenter;
 import com.tunghh.footballdata.presenter.CompetitionLoadPresenterImpl;
 
