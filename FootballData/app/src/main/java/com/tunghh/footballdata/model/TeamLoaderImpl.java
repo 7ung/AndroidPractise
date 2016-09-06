@@ -1,5 +1,6 @@
 package com.tunghh.footballdata.model;
 
+import com.tunghh.footballdata.model.POJO.Team_Competition;
 import com.tunghh.footballdata.service.Router;
 import com.tunghh.footballdata.service.Constants;
 import com.tunghh.footballdata.model.POJO.Team;
@@ -15,7 +16,7 @@ import retrofit2.Response;
 /**
  * Created by TungHH on 8/24/2016.
  */
-public class TeamLoaderImpl implements TeamLoader, Callback<ArrayList<Team>> {
+public class TeamLoaderImpl implements TeamLoader, Callback<Team_Competition> {
 
     TeamLoadPresenter presenter;
 
@@ -24,7 +25,7 @@ public class TeamLoaderImpl implements TeamLoader, Callback<ArrayList<Team>> {
     }
 
     @Override
-    public void onResponse(Call<ArrayList<Team>> call, Response<ArrayList<Team>> response) {
+    public void onResponse(Call<Team_Competition> call, Response<Team_Competition> response) {
         if (response.isSuccessful()){
             presenter.updateUI(response.body());
         }else{
@@ -33,7 +34,7 @@ public class TeamLoaderImpl implements TeamLoader, Callback<ArrayList<Team>> {
     }
 
     @Override
-    public void onFailure(Call<ArrayList<Team>> call, Throwable t) {
+    public void onFailure(Call<Team_Competition> call, Throwable t) {
         if (t instanceof UnknownHostException){
             presenter.showMsg("Connection Failed");
         }else{
@@ -44,7 +45,7 @@ public class TeamLoaderImpl implements TeamLoader, Callback<ArrayList<Team>> {
     @Override
     public void loadTeams(int competitionId) {
         Router api = Constants.createService(Router.class);
-        Call<ArrayList<Team>> call =  api.getTeams(competitionId);
+        Call<Team_Competition> call =  api.getTeams(competitionId);
         call.enqueue(this);
     }
 }

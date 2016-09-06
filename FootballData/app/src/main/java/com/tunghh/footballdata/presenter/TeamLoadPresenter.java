@@ -1,6 +1,7 @@
 package com.tunghh.footballdata.presenter;
 
 import com.tunghh.footballdata.model.POJO.Team;
+import com.tunghh.footballdata.model.POJO.Team_Competition;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public interface TeamLoadPresenter {
     void loadData(int competitionId);
 
-    void updateUI(ArrayList<Team> competitions);
+    void updateUI(Team_Competition competitions);
 
     void showMsg(String message);
 }

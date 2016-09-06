@@ -4,6 +4,7 @@ import com.tunghh.footballdata.model.POJO.Competition;
 import com.tunghh.footballdata.model.POJO.Fixture;
 import com.tunghh.footballdata.model.POJO.Table;
 import com.tunghh.footballdata.model.POJO.Team;
+import com.tunghh.footballdata.model.POJO.Team_Competition;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,7 @@ public interface Router {
     Call<ArrayList<Competition>> getCompetitions(@Query("season") String season);
 
     @GET("competitions/{id}/teams")
-    Call<ArrayList<Team>> getTeams(@Path("id") int competitionId);
+    Call<Team_Competition> getTeams(@Path("id") int competitionId);
 
     @GET("competitions/{id}/leagueTable")
     Call<Table> getTable(@Path("id") int competitionId);

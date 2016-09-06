@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen"
+    android:paddingTop="@dimen/padding_3"
+    tools:context="com.tunghh.footballdata.views.TeamsActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_title_3"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Lorem"/>
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_1"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_large"
+        android:textColor="@color/textColorSecondaryDark"
+        android:layout_below="@+id/tv_title"
+        android:text="All teams"/>
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_subtitle"
+        android:layout_marginTop="@dimen/spacing_2">
+        <LinearLayout
+            android:id="@+id/layout_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_1"
+            android:paddingRight="@dimen/padding_1">
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -5,6 +5,11 @@
 
     <dimen name="screen_horizontal_padding">16dp</dimen>
 
+    <dimen name="font_title_1">24dp</dimen>
+    <dimen name="font_title_2">28dp</dimen>
+    <dimen name="font_title_3">32dp</dimen>
+    <dimen name="font_title_4">36dp</dimen>
+
     <dimen name="font_very_large">24sp</dimen>
     <dimen name="font_large">18sp</dimen>
     <dimen name="font_medium_large">16sp</dimen>
@@ -18,11 +23,21 @@
     <dimen name="padding_3">24dp</dimen>
 
     <dimen name="spacing_1">8dp</dimen>
-    <dimen name="spacing_2">56dp</dimen>
+    <dimen name="spacing_2">16dp</dimen>
+    <dimen name="spacing_3">20dp</dimen>
+    <dimen name="spacing_4">24dp</dimen>
+    <dimen name="spacing_6">56dp</dimen>
 
     <dimen name="height_1">36dp</dimen>
     <dimen name="height_2">60dp</dimen>
     <dimen name="height_3">72dp</dimen>
+
+    <dimen name="btn_size_1">36dp</dimen>
+    <dimen name="btn_size_2">48dp</dimen>
+    <dimen name="btn_size_3">54dp</dimen>
+    <dimen name="btn_size_4">72dp</dimen>
+
+    <dimen name="iv_team_logo">112dp</dimen>
 
     <dimen name="cardview_corner">@dimen/radius_small</dimen>
     <dimen name="cardview_maintext_paddingTop">@dimen/padding_3</dimen>

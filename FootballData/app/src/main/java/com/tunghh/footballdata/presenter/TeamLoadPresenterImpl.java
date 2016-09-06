@@ -1,5 +1,6 @@
 package com.tunghh.footballdata.presenter;
 
+import com.tunghh.footballdata.model.POJO.Team_Competition;
 import com.tunghh.footballdata.model.TeamLoader;
 import com.tunghh.footballdata.model.TeamLoaderImpl;
 import com.tunghh.footballdata.model.POJO.Team;
@@ -27,7 +28,7 @@ public class TeamLoadPresenterImpl implements  TeamLoadPresenter{
 
 
     @Override
-    public void updateUI(ArrayList<Team> competitions) {
+    public void updateUI(Team_Competition competitions) {
         view.updateUI(competitions);
     }
 

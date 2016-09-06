@@ -21,6 +21,7 @@ import com.tunghh.footballdata.presenter.TableLoadPresenter;
 import com.tunghh.footballdata.presenter.TableLoadPresenterImpl;
 import com.tunghh.footballdata.views.FixtureActivity;
 import com.tunghh.footballdata.views.TableView;
+import com.tunghh.footballdata.views.TeamsActivity;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -139,8 +140,7 @@ public class CardViewLeague extends CardView implements TableView{
         @Override
         public void onClick(View view) {
             Log.d("", "teamsClick");
-            //toggleVisibility(expandableDetail);
-
+            TeamsActivity.create(getContext(), getLeague().getId(), getLeague().getCaption());
         }
     };
     OnClickListener tableClick = new OnClickListener() {

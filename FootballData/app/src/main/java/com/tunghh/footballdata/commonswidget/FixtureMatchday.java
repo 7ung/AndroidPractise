@@ -56,18 +56,18 @@ public class FixtureMatchday extends LinearLayout implements FixtureView {
     public void updateUI(Fixture fixtureMatch) {
         fixture = fixtureMatch;
 
-        if (fixtureMatch.getFixture().isEmpty() == false) {
+//        if (fixtureMatch.getFixture().isEmpty() == false) {
             for (FixtureMatch match : fixtureMatch.getFixture()) {
                 FixtureMatchView fixtureMatchView =
                         new FixtureMatchView(this.getContext(), match);
                 listMatch.addView(fixtureMatchView.getRootView());
             }
-            ((ViewGroup)this.getParent())
-                    .addView(new FixtureMatchday(
-                            this.getContext(),
-                            mCompetitionId,
-                            mMatchday + 1));
-        }
+//            ((ViewGroup)this.getParent())
+//                    .addView(new FixtureMatchday(
+//                            this.getContext(),
+//                            mCompetitionId,
+//                            mMatchday + 1));
+//        }
     }
 
     @Override
